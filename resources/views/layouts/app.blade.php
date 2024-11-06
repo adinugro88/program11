@@ -17,8 +17,8 @@
         <link href="{{ asset('assets/plugins/simplebar/css/simplebar.css') }}" rel="stylesheet">
 
         <!-- Loader -->
-        <link href="{{ asset('assets/css/pace.min.css') }}" rel="stylesheet">
-        <script src="{{ asset('assets/js/pace.min.js') }}"></script>
+        {{-- <link href="{{ asset('assets/css/pace.min.css') }}" rel="stylesheet">
+        <script src="{{ asset('assets/js/pace.min.js') }}"></script> --}}
 
         <!-- Main Styles -->
         <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
