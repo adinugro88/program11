@@ -22,40 +22,17 @@
               <div class="menu-title">Dashboard</div>
             </a>
           </li>
-          <li>
-            <a href="javascript:;" class="has-arrow">
-              <div class="parent-icon"><span class="material-symbols-outlined">apps</span>
-              </div>
-              <div class="menu-title">Application</div>
-            </a>
-            <ul>
-              <li> <a href="app-emailbox.html"><span class="material-symbols-outlined">arrow_right</span>Email</a>
-              </li>
-              <li> <a href="app-chat-box.html"><span class="material-symbols-outlined">arrow_right</span>Chat Box</a>
-              </li>
-              <li> <a href="app-file-manager.html"><span class="material-symbols-outlined">arrow_right</span>File Manager</a>
-              </li>
-              <li> <a href="app-contact-list.html"><span class="material-symbols-outlined">arrow_right</span>Contatcs</a>
-              </li>
-              <li> <a href="app-to-do.html"><span class="material-symbols-outlined">arrow_right</span>Todo List</a>
-              </li>
-              <li> <a href="app-invoice.html"><span class="material-symbols-outlined">arrow_right</span>Invoice</a>
-              </li>
-              <li> <a href="app-fullcalender.html"><span class="material-symbols-outlined">arrow_right</span>Calendar</a>
-              </li>
-            </ul>
-          </li>
-          <li class="menu-label">UI Elements</li>
+          <li class="menu-label">Data Master </li>
           <li>
             <a href="javascript:;" class="has-arrow">
               <div class="parent-icon"><span class="material-symbols-outlined">widgets</span>
               </div>
-              <div class="menu-title">Widgets</div>
+              <div class="menu-title">Karyawan</div>
             </a>
             <ul>
-              <li> <a href="widget-data.html"><span class="material-symbols-outlined">arrow_right</span>Data Widget</a>
+              <li> <a href="/karyawan"><span class="material-symbols-outlined">arrow_right</span>All Data </a>
               </li>
-              <li> <a href="widget-static.html"><span class="material-symbols-outlined">arrow_right</span>Widget Static</a>
+              <li> <a href="widget-static.html"><span class="material-symbols-outlined">arrow_right</span>Karyawan baru </a>
               </li>
             </ul>
           </li>
