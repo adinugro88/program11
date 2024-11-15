@@ -17,14 +17,30 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @if(count($karyawan) > 0 )
+
+                                @foreach($karyawan as $data)
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
+                                    <th scope="row">{{$loop->iteration}}</th>
+                                    <td>{{$data->nama}}</td>
+                                    <td>{{$data->nip}}</td>
+                                    <td>{{$data->email}}</td>
+                                    <td>{{$data->no_hp}}</td>
+                                    <td>{{$data->status}}</td>
+                                    <td>
+                                        <a href="{{route('karyawan.edit',$data->id)}}" class="btn btn-sm btn-warning">Edit</a>
+                                        <a href="{{route('karyawan.delete',$data->id)}}" class="btn btn-sm btn-danger">Delete</a>
+                                    </td>
                                 </tr>
+                                @endforeach
+
+                                @else
+                                    <tr>
+                                        <td colspan="6" align="center">Belum ada data</td>
+                                    </tr>
+                                @endif
+
+
                             </tbody>
                         </table>
                     </div>
