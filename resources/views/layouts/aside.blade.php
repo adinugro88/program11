@@ -25,14 +25,14 @@
           <li class="menu-label">Data Master </li>
           <li>
             <a href="javascript:;" class="has-arrow">
-              <div class="parent-icon"><span class="material-symbols-outlined">widgets</span>
+              <div class="parent-icon"><span class="material-symbols-outlined @if(Request::is('karyawan/*')) active @endif">widgets</span>
               </div>
               <div class="menu-title">Karyawan</div>
             </a>
             <ul>
               <li> <a href="/karyawan"><span class="material-symbols-outlined">arrow_right</span>All Data </a>
               </li>
-              <li> <a href="widget-static.html"><span class="material-symbols-outlined">arrow_right</span>Karyawan baru </a>
+              <li> <a href="/karyawan/create"><span class="material-symbols-outlined">arrow_right</span>Karyawan baru </a>
               </li>
             </ul>
           </li>

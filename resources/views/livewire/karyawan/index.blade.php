@@ -1,7 +1,11 @@
 <div>
     <div class="row">
         <div class="col-xl-12 mx-auto">
-            <h6 class="mb-0 text-uppercase">Basic Table</h6>
+            <div class="d-flex align-items-center justify-content-between">
+                <h6 class="mb-0 text-uppercase">Data karyawan </h6>
+            <a href="/karyawan/create" wire:navigate class="btn btn-info">Create</a>
+            </div>
+
             <hr>
                 <div class="card">
                     <div class="card-body">
@@ -18,22 +22,20 @@
                             </thead>
                             <tbody>
                                 @if(count($karyawan) > 0 )
-
-                                @foreach($karyawan as $data)
-                                <tr>
-                                    <th scope="row">{{$loop->iteration}}</th>
-                                    <td>{{$data->nama}}</td>
-                                    <td>{{$data->nip}}</td>
-                                    <td>{{$data->email}}</td>
-                                    <td>{{$data->no_hp}}</td>
-                                    <td>{{$data->status}}</td>
-                                    <td>
-                                        <a href="{{route('karyawan.edit',$data->id)}}" class="btn btn-sm btn-warning">Edit</a>
-                                        <a href="{{route('karyawan.delete',$data->id)}}" class="btn btn-sm btn-danger">Delete</a>
-                                    </td>
-                                </tr>
-                                @endforeach
-
+                                    @foreach($karyawan as $data)
+                                    <tr>
+                                        <th scope="row">{{$loop->iteration}}</th>
+                                        <td>{{$data->nama}}</td>
+                                        <td>{{$data->nip}}</td>
+                                        <td>{{$data->email}}</td>
+                                        <td>{{$data->no_hp}}</td>
+                                        <td>{{$data->status}}</td>
+                                        <td>
+                                            <a href="{{route('karyawan.edit',$data->id)}}" class="btn btn-sm btn-warning">Edit</a>
+                                            <a href="{{route('karyawan.delete',$data->id)}}" class="btn btn-sm btn-danger">Delete</a>
+                                        </td>
+                                    </tr>
+                                    @endforeach
                                 @else
                                     <tr>
                                         <td colspan="6" align="center">Belum ada data</td>
