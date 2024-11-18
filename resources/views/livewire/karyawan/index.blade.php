@@ -5,7 +5,6 @@
                 <h6 class="mb-0 text-uppercase">Data karyawan </h6>
             <a href="/karyawan/create" wire:navigate class="btn btn-info">Create</a>
             </div>
-
             <hr>
                 <div class="card">
                     <div class="card-body">
@@ -18,6 +17,7 @@
                                     <th scope="col">EMail</th>
                                     <th scope="col">no_HP</th>
                                     <th scope="col">Status</th>
+                                    <th scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -31,8 +31,8 @@
                                         <td>{{$data->no_hp}}</td>
                                         <td>{{$data->status}}</td>
                                         <td>
-                                            <a href="{{route('karyawan.edit',$data->id)}}" class="btn btn-sm btn-warning">Edit</a>
-                                            <a href="{{route('karyawan.delete',$data->id)}}" class="btn btn-sm btn-danger">Delete</a>
+                                            <a href="" class="btn btn-sm btn-warning">Edit</a>
+                                            <a href="" class="btn btn-sm btn-danger">Delete</a>
                                         </td>
                                     </tr>
                                     @endforeach
@@ -41,8 +41,6 @@
                                         <td colspan="6" align="center">Belum ada data</td>
                                     </tr>
                                 @endif
-
-
                             </tbody>
                         </table>
                     </div>
