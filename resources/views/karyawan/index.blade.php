@@ -10,7 +10,7 @@
             <h4>Data Karyawan</h4>
         </div>
         <div class="col text-end">
-            <a href="{{ route('karyawan.create') }}" class="btn btn-sm btn-primary">Tambah Karyawan</a>
+            <a href="{{ route('karyawan.create') }}" class="btn btn-sm btn-primary" wire:navigate>Tambah Karyawan</a>
         </div>
     </div>
     <hr>
@@ -47,7 +47,7 @@
                             <td>
                                 <div class="d-flex">
                                     <a href="{{ route('karyawan.edit', $item->id) }}"
-                                        class="btn btn-sm btn-warning me-2"><i class="bi bi-pencil-square"></i></a>
+                                        class="btn btn-sm btn-warning me-2" wire:navigate><i class="bi bi-pencil-square"></i></a>
                                     {{-- <form action="{{ route('karyawan.destroy', $item->id) }}" method="post"
                                         class="d-inline">
                                         @csrf

@@ -32,6 +32,14 @@
           </li>
 
           <li>
+            <a href="/" wire:navigate>
+              <div class="parent-icon"><span class="material-symbols-outlined">backup_table</span>
+              </div>
+              <div class="menu-title">Table</div>
+            </a>
+          </li>
+
+          <li>
             <a href="javascript:;" class="has-arrow">
               <div class="parent-icon"><span class="material-symbols-outlined">apps</span>
               </div>
