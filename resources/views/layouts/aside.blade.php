@@ -16,12 +16,21 @@
         <!--navigation-->
         <ul class="metismenu" id="menu">
           <li>
-            <a href="/dashboard">
+            <a href="/dashboard" wire:navigate>
               <div class="parent-icon"><span class="material-symbols-outlined">home</span>
               </div>
               <div class="menu-title">Dashboard</div>
             </a>
           </li>
+
+          <li>
+            <a href="/karyawan" wire:navigate>
+              <div class="parent-icon"><span class="material-symbols-outlined">account_circle</span>
+              </div>
+              <div class="menu-title">Karyawan</div>
+            </a>
+          </li>
+
           <li>
             <a href="javascript:;" class="has-arrow">
               <div class="parent-icon"><span class="material-symbols-outlined">apps</span>
