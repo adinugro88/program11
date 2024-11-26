@@ -45,14 +45,17 @@
                                 </span>
                             </td>
                             <td>
-                                <a href="{{ route('karyawan.edit', $item->id) }}"
-                                    class="btn btn-sm btn-warning">Edit</a>
-                                <form action="{{ route('karyawan.destroy', $item->id) }}" method="post"
-                                    class="d-inline">
-                                    @csrf
-                                    @method('delete')
-                                    <button type="submit" class="btn btn-sm btn-danger">Delete</button>
-                                </form>
+                                <div class="d-flex">
+                                    <a href="{{ route('karyawan.edit', $item->id) }}"
+                                        class="btn btn-sm btn-warning me-2"><i class="bi bi-pencil-square"></i></a>
+                                    {{-- <form action="{{ route('karyawan.destroy', $item->id) }}" method="post"
+                                        class="d-inline">
+                                        @csrf
+                                        @method('delete')
+                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                    </form> --}}
+                                    <livewire:karyawan.delete :karyawan="$item" />
+                                </div>
                             </td>
                     @endforeach
                 </tbody>

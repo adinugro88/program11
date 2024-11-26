@@ -23,4 +23,10 @@ class KaryawanController extends Controller
         $data = Karyawan::find($id);
         return view('karyawan.edit', compact('data', 'id'));
     }
+
+    public function destroy($id)
+    {
+        Karyawan::find($id)->delete();
+        return redirect()->route('karyawan.index');
+    }
 }
