@@ -16,13 +16,12 @@
         <!--navigation-->
         <ul class="metismenu" id="menu">
           <li>
-            <a href="/dashboard">
+            <a href="/dashboard" wire:navigate>
               <div class="parent-icon"><span class="material-symbols-outlined">home</span>
               </div>
               <div class="menu-title">Dashboard</div>
             </a>
           </li>
-          <li class="menu-label">Data Master </li>
           <li>
             <a href="javascript:;" class="has-arrow">
               <div class="parent-icon"><span class="material-symbols-outlined @if(Request::is('karyawan/*')) active @endif">widgets</span>
