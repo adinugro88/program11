@@ -9,6 +9,4 @@ class Karyawan extends Model
 {
     use HasFactory;
     protected $guarded = [];
-
-    
 }

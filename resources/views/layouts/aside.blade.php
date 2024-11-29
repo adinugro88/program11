@@ -16,7 +16,7 @@
         <!--navigation-->
         <ul class="metismenu" id="menu">
           <li>
-            <a href="/dashboard" wire:navigate>
+            <a href="/dashboard">
               <div class="parent-icon"><span class="material-symbols-outlined">home</span>
               </div>
               <div class="menu-title">Dashboard</div>
@@ -24,12 +24,12 @@
           </li>
           <li>
             <a href="javascript:;" class="has-arrow">
-              <div class="parent-icon"><span class="material-symbols-outlined @if(Request::is('karyawan/*')) active @endif">widgets</span>
+              <div class="parent-icon"><span class="material-symbols-outlined">apps</span>
               </div>
-              <div class="menu-title">Karyawan</div>
+              <div class="menu-title">Application</div>
             </a>
             <ul>
-              <li> <a href="/karyawan"><span class="material-symbols-outlined">arrow_right</span>All Data </a>
+              <li> <a href="app-emailbox.html"><span class="material-symbols-outlined">arrow_right</span>Email</a>
               </li>
               <li> <a href="/karyawan/create"><span class="material-symbols-outlined">arrow_right</span>Karyawan baru </a>
               </li>
