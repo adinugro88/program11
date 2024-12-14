@@ -9,9 +9,4 @@ class Karyawan extends Model
 {
     use HasFactory;
     protected $guarded = [];
-
-    public function gaji()
-    {
-        return $this->hasOne(Gaji::class);
-    }
 }
