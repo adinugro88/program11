@@ -4,17 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Gaji extends Model
+class DetailGaji extends Model
 {
+    protected $table = 'detail_gajis';
     protected $guarded = ['id'];
 
-    protected static function boot()
+    public function gaji()
     {
-        parent::boot();
-
-        static::creating(function ($model) {
-            $model->no_kode = 'GAJI-' . strtoupper(uniqid());
-        });
+        return $this->belongsTo(Gaji::class);
     }
 
     public function karyawan()

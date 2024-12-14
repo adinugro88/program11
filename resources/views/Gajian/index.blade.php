@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Karyawan') }}
+            {{ __('Gajian') }}
         </h2>
     </x-slot>
 
@@ -10,7 +10,7 @@
             <h4>Data Gajian</h4>
         </div>
         <div class="col text-end">
-            <a href="{{ route('karyawan.create') }}" class="btn btn-sm btn-primary" wire:navigate>Tambah Karyawan</a>
+            <a href="{{ route('gajian.create') }}" class="btn btn-sm btn-primary" wire:navigate>Tambah Gajian</a>
         </div>
     </div>
     <hr>
@@ -21,40 +21,34 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">NIP</th>
+                        <th scope="col">Kode</th>
+                        <th scope="col">Tanggal</th>
                         <th scope="col">Nama</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Nomer HP</th>
-                        <th scope="col">Alamat</th>
-                        <th scope="col">Status</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($data as $item)
+                    @foreach ($gajian as $item)
                         <tr>
                             <th scope="row">{{ $loop->iteration }}</th>
-                            <td>{{ $item->nip }}</td>
-                            <td>{{ $item->nama }}</td>
-                            <td>{{ $item->email }}</td>
-                            <td>{{ $item->no_hp }}</td>
-                            <td>{{ $item->alamat }}</td>
-                            <td>
-                                <span class="badge bg-{{ $item->status == 1 ? 'success' : 'danger' }}">
-                                    {{ $item->status == 1 ? 'Active' : 'Inactive' }}
-                                </span>
-                            </td>
+                            <td>{{ $item->no_kode }}</td>
+                            <td>{{ $item->tanggal }}</td>
+                            <td>{{ $item->karyawan->nama }}</td>
                             <td>
                                 <div class="d-flex">
-                                    <a href="{{ route('karyawan.edit', $item->id) }}"
-                                        class="btn btn-sm btn-warning me-2" wire:navigate><i class="bi bi-pencil-square"></i></a>
-                                    {{-- <form action="{{ route('karyawan.destroy', $item->id) }}" method="post"
+                                    <a href="{{ route('gajian.show', $item->id) }}" class="btn btn-sm btn-info me-2"
+                                        wire:navigate><i class="bi bi-eye"></i></a>
+                                    <a href="{{ route('gajian.edit', $item->id) }}" class="btn btn-sm btn-warning me-2"
+                                        wire:navigate><i class="bi bi-pencil-square"></i></a>
+                                    <form action="{{ route('gajian.destroy', $item->id) }}" method="post"
                                         class="d-inline">
                                         @csrf
                                         @method('delete')
-                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
-                                    </form> --}}
-                                    <livewire:karyawan.delete :karyawan="$item" />
+                                        <button type="submit" class="btn btn-sm btn-danger">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </form>
+                                    {{-- <livewire:gajian.delete :gajian="$item" /> --}}
                                 </div>
                             </td>
                     @endforeach
