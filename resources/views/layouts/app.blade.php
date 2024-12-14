@@ -31,8 +31,6 @@
         <link href="{{ asset('assets/css/minimal-theme.css') }}" rel="stylesheet">
         <link href="{{ asset('assets/css/shadow-theme.css') }}" rel="stylesheet">
 
-        @vite([])
-
         <!-- Livewire Styles -->
         @livewireStyles
     </head>

@@ -14,5 +14,4 @@ class Karyawan extends Model
     {
         return $this->hasOne(Gaji::class);
     }
-    
 }

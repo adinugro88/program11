@@ -1,5 +1,5 @@
 <div>
-    <button class="btn btn-sm btn-danger" wire:click='delete'>
+    <button class="btn btn-danger">
         <i class="bi bi-trash"></i>
     </button>
 </div>
