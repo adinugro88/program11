@@ -11,8 +11,6 @@ class Create extends Component
 
     public function mount()
     {
-
-
         $this->nama = null;
         $this->nip = null;
         $this->alamat = null;
